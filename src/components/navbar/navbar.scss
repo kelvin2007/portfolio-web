@@ -1,9 +1,32 @@
 .navbar{
+    background: rgba(0,0,0,0);
     height: 70px;
     width: 100%;
     position: fixed;
     z-index: 2;
     top: 0;
+
+    &.scrolled{
+        background-color: #0F0427 !important;
+    }
+
+    .nav__logo{
+        overflow: hidden;
+        .logo{
+            transition: 0.7s ease;
+            -webkit-transition: 0.7s ease;
+            -moz-transition: 0.7s ease;
+            -ms-transition: 0.7s ease;
+            -o-transition: 0.7s ease;
+            &:hover{
+                transform: rotate(20deg);
+                -webkit-transform: rotate(20deg);
+                -moz-transform: rotate(20deg);
+                -ms-transform: rotate(20deg);
+                -o-transform: rotate(20deg);
+}
+        }
+    }
 
     .wrapper{
         display: flex;
@@ -55,7 +78,7 @@
                     width: 30px;
                     height: 3px;
                     margin: 5px auto;
-                    background-color:  black; //F2F2F2
+                    background-color:  #F2F2F2; 
                     transition: all 0.3s ease-in-out;
                     -webkit-transition: all 0.3s ease-in-out;
                     -moz-transition: all 0.3s ease-in-out;
@@ -76,7 +99,7 @@
             top: 70px;
             gap: 0;
             flex-direction: column;
-            background-color: white;
+            background-color: #0F0427;
             width: 100%;
             text-align: center;
             transition: 0.3s;
@@ -95,7 +118,7 @@
                     }
                 }
                 &:hover{
-                    background-color: red;
+                    background-color: #161121;
                 }
             }
 

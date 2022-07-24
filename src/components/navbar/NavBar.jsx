@@ -1,17 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { ReactComponent as IconMenu } from '../../assets/Design Logo.svg';
 import './navbar.scss';
 import NavItem from './NavItem';
 
 function NavBar({open, setOpen}) {
     const items = ['Home', 'About', 'Projects', 'Contacts']
+    const [color, setColor] = useState(false);
+    const changeColor = () => {
+        if(window.scrollY >= 10){
+            setColor(true);
+        } else {
+            setColor(false);
+        }
+        console.log(window.scrollY)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeColor);
+      }, []);
 
     return (
-        <div className="navbar">
+        <div className={"navbar  " + (color && "scrolled")}>
             <div className="wrapper">
                 <div className="nav__logo">
                     <a href="#home">
-                        <IconMenu width='4rem' height='4rem'/>
+                        <IconMenu className="logo" width='4rem' height='4rem'/>
                     </a>
                 </div>
                 <div className="nav__link">
