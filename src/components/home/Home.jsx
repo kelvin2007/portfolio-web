@@ -1,16 +1,31 @@
-import React from 'react';
-import { ReactComponent as ProfilePic } from '../../assets/Picture.svg';
+import React, { useEffect, useRef } from 'react';
+import { init } from 'ityped';
 import './home.scss';
 
 function Home(){
+    const typeRef = useRef();
+
+    useEffect(()=>{
+        init(typeRef.current, {
+            showCursor: true,
+            backDelay: 1000,
+            backSpeed: 60,
+            strings: ['Data Science', 'Data Analytics', 'Web Development', 'Flutter Development']
+        })
+    }, [])
+
     return (
         <div className='home' id="home">
-            {/* <div className='greetings'>
-                <p className='home-p'>Hello,</p>
-                <p className='home-p'>I'm <span>Kelvin Erlangga</span></p>
-                <p className='home-sub'>Highly Interested in Data Science and Web Development</p>
+            <div className='left'>
+                <p className='home-p'>Hello, I'm</p>
+                <p className='home-span'><p className='home-span__text'><span>Kelvin Erlangga</span></p></p>
+                <p className='home-sub'>Highly Interested in <span ref={typeRef}></span></p>
             </div>
-            <ProfilePic width='25rem' height='25rem'/> */}
+            <div className='right'>
+                <div className='pic__container'>
+                    <img src='assets/picture.png' alt='Profile Pic'></img>
+                </div>
+            </div>
         </div>
     );
 }
