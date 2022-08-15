@@ -1,3 +1,209 @@
 .about{
     background-color: #100B16;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .about__subtitle{
+        font-family: 'Montserrat', sans-serif;
+        color: gray;
+        font-size: 15px;
+        font-weight: 400;
+        padding-top: 50px;
+        padding-bottom: 5px;
+        overflow: hidden;
+
+        @media screen and (max-width: 768px) {
+            padding-top: 25px;
+        }
+    }
+
+    .about__title{
+        font-family: 'Arial', sans-serif;
+        color: white;
+        font-weight: 700;
+        font-size:25px;
+        overflow: hidden;
+    }
+
+    .about__container{
+        display: flex;
+        padding-left: 100px;
+        padding-right: 100px;
+
+        // for android
+        @media screen and (max-width: 1024px) {
+            padding-left: 25px;
+            padding-right: 25px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about__img{
+            flex: 0.45;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            @media screen and (max-width: 1024px) {
+                margin-top: 25px;
+            }
+
+            .about__img__wrapper__2{
+                background: linear-gradient(
+                    45deg,
+                    transparent,
+                    #9884ff,
+                    transparent
+                );
+                margin: 25px;
+                border-radius: 2rem;
+                -webkit-border-radius: 2rem;
+                -moz-border-radius: 2rem;
+                -ms-border-radius: 2rem;
+                -o-border-radius: 2rem;
+                display: grid;
+                place-items: center;
+                overflow: visible;
+
+
+                
+                img
+                {
+                    background-color: #7158F0;
+                    height: 300px;
+                    width: auto;
+                    overflow: hidden;
+                    border-radius: 2rem;
+                    -webkit-border-radius: 2rem;
+                    -moz-border-radius: 2rem;
+                    -ms-border-radius: 2rem;
+                    -o-border-radius: 2rem;
+                    transform: rotate(10deg);
+                    -webkit-transform: rotate(10deg);
+                    -moz-transform: rotate(10deg);
+                    -ms-transform: rotate(10deg);
+                    -o-transform: rotate(10deg);
+                    transition: 0.7s;
+                    -webkit-transition: 0.7s;
+                    -moz-transition: 0.7s;
+                    -ms-transition: 0.7s;
+                    -o-transition: 0.7s;
+                    &:hover{
+                        transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -ms-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                    }
+
+                    @media screen and (max-width: 1024px) {
+                        height: 200px;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+        .about__content{
+            flex: 0.55;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media screen and (max-width: 768px) {
+                padding: 5px;
+            }
+
+            .about__p{
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 1.6;
+                padding-top: 40px;
+                overflow: hidden;
+                @media screen and (max-width: 768px) {
+                    padding-top: 5px;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 1.3;
+                }
+            }
+
+            .about__button{
+                padding-top: 30px;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+
+                @media screen and (max-width: 768px) {
+                    padding-top: 20px;
+                }
+
+                .about__a{
+                    text-decoration: none;
+                    overflow: hidden;
+                    
+                    .about__btn
+                    {
+                        cursor: pointer;
+                        overflow: hidden;
+                        background-color: #7158F0;
+                        height:40px;
+                        width: 150px;
+                        border:none;
+                        border-radius:10px;
+                        -webkit-border-radius:10px;
+                        -moz-border-radius:10px;
+                        -ms-border-radius:10px;
+                        -o-border-radius:10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @media screen and (max-width: 768px) {
+                            height: 35px;
+                            width: 120px;
+                        }
+                        
+
+                        .about__icn{
+                            color: white;
+                            font-size: 1.2rem;
+                            padding-right: 5px;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        span   {
+                            font-family: 'Arial', sans-serif;
+                            color: white;
+                            padding-top: 2px;
+                            font-weight: 700;
+                        }
+                    }
+                    &:hover{
+                        .about__btn{
+                            background-color: white;
+
+                            .about__icn{
+                                color: crimson;
+                            }
+    
+                            span   {
+                                color: #7158F0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

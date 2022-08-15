@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { init } from 'ityped';
-import './home.scss';
+import './home.scss'
+import homePic from '../../assets/picture.png';
 
 function Home(){
     const typeRef = useRef();
@@ -23,7 +24,7 @@ function Home(){
             </div>
             <div className='right'>
                 <div className='pic__container'>
-                    <img src='assets/picture.png' alt='Profile Pic'></img>
+                    <img src={homePic} alt='Profile Pic'></img>
                 </div>
             </div>
         </div>

@@ -3,8 +3,9 @@
     background-color: #06000F;
     padding-left: 100px;
     padding-right: 100px;
+    
     // for android
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         padding-left: 25px;
         padding-right: 25px;
         flex-direction: column;
@@ -27,16 +28,28 @@
             font-family: 'Merriweather', sans-serif;
             color: white;
             font-size: 40px;
-            font-weight: 400px;
+            font-weight: 400;
+
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+            }
         }
         
         .home-span{
             font-family: 'Merriweather', sans-serif;
             color: white;
-            font-weight: 700px;
+            font-weight: 500;
             font-size:50px;
             margin-top: 10px;
             margin-bottom: 10px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 30px;
+            }
+
+            @media screen and (max-width: 324px) {
+                font-size: 20px;
+            }
 
 
             .home-span__text{
