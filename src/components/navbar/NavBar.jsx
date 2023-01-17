@@ -12,7 +12,6 @@ function NavBar({open, setOpen}) {
         } else {
             setColor(false);
         }
-        console.log(window.scrollY)
     }
 
     useEffect(() => {
